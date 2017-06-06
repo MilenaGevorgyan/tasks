@@ -1,0 +1,249 @@
+<html>
+
+<script>
+/*1.	Write a program that prints ‘Hello World’ to the screen.
+  var x="Hello world";
+ document.write(x);
+ */
+/*2.	Write a program that asks the user for her name and greets her with her name.
+   var a=prompt("What is your name");
+alert("Hi"+ " " + a);
+*/
+/*3.	Modify the previous program such that only the users Alice and Bob are greeted with their names.
+  var a= prompt("What is your name");
+  if (a== "Alice"|| a== "Bob"){
+  alert("Hi"+" "+a);
+ }
+  else {
+  alert("Wrong answer");
+}*/
+/*4.	Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
+var n=prompt("Introduction number");
+var sum=0;
+for (var i=1; i<=n; i++){
+sum+=i
+ }
+document.write(sum)
+*/
+/*5.	Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+ var n=prompt("Introduction number");
+ var sum=0;
+ for (var i=1; i<=n; i++){
+ if(i%3===0 || i%5===0){
+ sum+=i
+
+ }
+ }
+ document.write(sum);
+ */
+/*6.	Write a program that asks the user for a number n and gives him the possibility to choose between computing the sum and computing the product of 1,…,n.
+var n=prompt("Introduction number");
+var j=prompt("Choose (+) or (*)");
+if (j=="+"){
+	var sum=0;
+		for (var i=1; i<=n; i++){
+		sum+=i;
+		}
+	document.write("your answer is"+" " + sum);
+	}
+ else if (j=="*"){
+	var mult=1;
+		for (var k=1; k<=n; k++){
+			mult*=k;
+		}
+	document.write("your answer is"+" " +mult);
+ }*/
+/*7.	Write a program that prints a multiplication table for numbers up to 12.
+ document.write("<table border='1px'>");
+ for(var i = 1; i <=12; i++) {
+  document.write("<tr>");
+	 for(var j = 1; j <=12; j++) {
+
+
+		document.write("<td>" + i*j + "</td>");
+	}
+	document.write("</tr>");
+ }
+ document.write("</table>");
+ */
+/*8.	Write a program that prints all prime numbers. 
+  var n=prompt("Introduction number");
+for (var counter = 1; counter <= n; counter++) {
+
+    var notPrime = false;
+   for (var i = 2; i <= counter; i++) {
+        if (counter%i===0 && i!==counter) {
+            notPrime = true;
+        }
+    }
+   if (notPrime === false) {
+               document.write(" "+counter);
+   }
+ }
+*/
+/*9.	Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. I counts only as one try if they input the same number multiple times consecutively.
+  var x=prompt("Secret Number");
+function number (){
+
+var a=301;
+var n=0;
+for(var i=1;i<=5;i++){
+if (x==a){
+alert(" You are winner")
+break;
+}
+
+if(x>a){
+n+=1;
+alert("You are too high"+" "+n);
+ x=prompt("Secret Number");
+}
+else if (x<a){
+n+=1;
+alert ("You are too low " +" "+n)
+x=prompt("Secret Number");
+}
+}
+}
+
+number(x);
+*/
+/*10.	Write a program that prints the next 20 leap years.
+  var year = prompt("please input a year to find out the next 20 years");
+var counter = 20;
+function leapyear(year) {
+    while (counter >= 0) {
+		if (year % 4 === 0&&(year % 100 !== 0||year % 400 === 0)){
+            document.write(year);
+            year++;
+            counter--;
+        } 
+        else {
+        year++;
+        }    
+    }
+}
+leapyear(year);
+*/
+/*12.	Write a function that returns the largest element in a list.
+var arr = [80,7,600,1,4,90];
+            var max = arr[0];
+            function maxValue(max){
+                for(let i=0;i<arr.length;++i){
+                    if(max<arr[i]){
+                        max = arr[i];
+                    }
+                }
+                document.write(max);
+            }maxValue(max);
+*/
+/*13.	Write function that reverses a list, preferably in place.
+var array1 = [1,4,5,7];
+var array2 = reverseArr(array1);
+function reverseArr(array) {
+    var array1 = array;
+    var array2 = new Array;
+    for(var i = array.length-1; i >= 0; i--) {
+        array2.push(array[i]);
+    }document.write(array2);
+    return array2;
+}
+reverseArr(array)
+
+*/
+/*14.	Write a function that checks whether an element occurs in a list
+var num=prompt("write a number");
+var arr=[1,2,3,4,5];
+function check(num) {
+    for (var i = 0; i < arr.length; i++) {
+        if (num==arr[i]){
+		document.write(true);
+		break;
+        }
+        else{
+		document.write(false);
+		break;
+        }
+		
+    }
+}check(num);
+*/
+ 
+ /*
+ 18.	18.	Write three functions that compute the sum of the numbers in a list: using a for-loop, a while-loop and recursion.
+ (Subject to availability of these constructs in your language of choice.)
+ 18.1
+ var arr = [10, 5, 7, 9, 12];
+
+function even() {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  document.write(sum);
+}
+even();
+
+18.2
+	  
+	  var arr = [10, 5, 7, 9, 12];
+
+function even() {
+  var sum = 0;
+  var i = 0;
+  while (i < arr.length) {
+    sum += arr[i];
+    i++
+  }
+  document.write(sum)
+}
+even()
+
+18.3
+var sumArr = function(array) {
+  if (array.length === 1) {
+    return array[0];
+  }
+  else {
+    return array.pop() + sumArr(array);
+  }
+};
+
+document.write(sumArr([1,2,3,4,5,6]));
+*/
+/*19.	Write a function on_all that applies a function to every element of a list.
+ Use it to print the first twenty perfect squares (a natural number n is a perfect square
+ if it can be written as n=m*m for some other natural number m. 1,4,9,16,25 are the first 5).
+ 
+function all() {
+  var n = 0;
+  for (var m = 1; m <= 20; m++) {
+    n = m * m;
+    document.write(" " + n);
+  }
+}
+all();
+
+ */
+/* 20.	Write a function that concatenates two lists. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
+ function my_array(){
+ var array1=["a","b","c"];
+ var array2=[1,2,3];
+ var array3=array1.concat(array2);
+ document.write (array3);
+ } 
+my_array()
+*/
+function my_array(){
+ var array1=["a","b","c"];
+ var array2=[1,2,3];
+ var array3 =combine. array1(array2);
+ document.write (array3);
+ } 
+my_array()
+
+</script>
+<body>
+
+</body>
+</html>
